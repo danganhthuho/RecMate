@@ -1,50 +1,52 @@
-# Welcome to your Expo app 👋
+# RecMate
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+RecMate is a mobile app that helps university students find other students to play sports with on campus.
 
-## Get started
+## Problem
 
-1. Install dependencies
+Students may want to play sports on campus but do not always have someone available to play with. This can make it difficult to participate in sports that require two or more players.
 
-   ```bash
-   npm install
-   ```
+## Solution
 
-2. Start the app
+RecMate allows students to discover, create, and join sports activities happening at their university.
 
-   ```bash
-   npx expo start
-   ```
+For example, a student who wants to play billiards can create an activity specifying the location, time, skill level, and number of players needed. Other students on the same campus can discover the activity and join instantly.
 
-In the output, you'll find options to open the app in a
+## Target Users
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+University students who want to find other students to play sports with on campus.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+The initial version of RecMate will focus on San Jose State University, with the goal of supporting additional universities in the future.
 
-## Get a fresh project
+## MVP Features
 
-When you're ready, run:
+- University-based student profiles
+- Discover sports activities on campus
+- Create a sports activity
+- Join and leave activities
+- Activity details
+- Skill level preferences
+- Gender preferences
+- Player capacity tracking
+- View hosted and joined activities
+- Basic user and activity reporting
 
-```bash
-npm run reset-project
-```
+## Planned Tech Stack
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- React Native
+- Expo
+- Supabase
+- PostgreSQL
 
-## Learn more
+## Future Vision
 
-To learn more about developing your project with Expo, look at the following resources:
+RecMate aims to expand beyond a single university and become a platform where students at different universities can easily find people on their campus to play sports with.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Future versions may include features such as:
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- In-app messaging
+- Push notifications
+- Player ratings
+- Friend system
+- Personalized activity recommendations
+- Additional universities
