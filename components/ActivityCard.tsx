@@ -1,6 +1,8 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { router } from 'expo-router';
+import { Pressable, StyleSheet, Text } from 'react-native';
 
 type ActivityCardProps = {
+    id: number;
     sport: string;
     location: string;
     time: string;
@@ -10,6 +12,7 @@ type ActivityCardProps = {
   };
 
 export default function ActivityCard({
+id,
 sport,
 location,
 time,
@@ -18,24 +21,31 @@ maxPlayers,
 onJoin,
 }: ActivityCardProps) {
   return (
-    <View style={styles.card}>
+    <Pressable
+      style={styles.card}
+      onPress={() => router.push(`/activity/${id}`)}
+    >
       <Text style={styles.sport}>{sport}</Text>
       <Text>{location}</Text>
       <Text>{time}</Text>
-      <Text>{currentPlayers} / {maxPlayers} players</Text>
+  
+      <Text>
+        {currentPlayers} / {maxPlayers} players
+      </Text>
+  
       <Pressable
         style={[
-            styles.joinButton,
-            currentPlayers >= maxPlayers && styles.fullButton,
+          styles.joinButton,
+          currentPlayers >= maxPlayers && styles.fullButton,
         ]}
         onPress={onJoin}
         disabled={currentPlayers >= maxPlayers}
-        >
+      >
         <Text style={styles.joinButtonText}>
-            {currentPlayers >= maxPlayers ? 'Full' : 'Join'}
+          {currentPlayers >= maxPlayers ? 'Full' : 'Join'}
         </Text>
-        </Pressable>
-    </View>
+      </Pressable>
+    </Pressable>
   );
 }
 

@@ -58,6 +58,7 @@ export default function HomeScreen() {
 
       {activities.map((activity) => (
         <ActivityCard
+          id={activity.id}
           key={activity.id}
           sport={activity.sport}
           location={activity.location}
