@@ -1,40 +1,8 @@
+import { activities } from '@/constants/activities';
 import { useLocalSearchParams } from 'expo-router';
 import { useRef } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 import MapView, { Marker } from 'react-native-maps';
-
-const activities = [
-  {
-    id: 1,
-    sport: 'Billiards',
-    location: 'Student Union',
-    time: 'Today · 6:00 PM',
-    currentPlayers: 1,
-    maxPlayers: 2,
-    latitude: 37.3352,
-    longitude: -121.8811,
-  },
-  {
-    id: 2,
-    sport: 'Badminton',
-    location: 'SRAC',
-    time: 'Today · 7:30 PM',
-    currentPlayers: 2,
-    maxPlayers: 4,
-    latitude: 37.3370,
-    longitude: -121.8805,
-  },
-  {
-    id: 3,
-    sport: 'Basketball',
-    location: 'SRAC Court',
-    time: 'Tomorrow · 4:00 PM',
-    currentPlayers: 5,
-    maxPlayers: 8,
-    latitude: 37.3371,
-    longitude: -121.8804,
-  },
-];
 
 export default function ActivityDetailsScreen() {
   const { id } = useLocalSearchParams();
@@ -57,7 +25,7 @@ export default function ActivityDetailsScreen() {
       <Text style={styles.title}>{activity.sport}</Text>
 
         <Pressable
-        style={styles.locationButton}
+          style={styles.locationButton}
         onPress={() => {
             mapRef.current?.animateToRegion(
               {
@@ -70,7 +38,8 @@ export default function ActivityDetailsScreen() {
             );
           }}
         >
-        <Text style={styles.locationText}>{activity.location}</Text>
+        <Text style={styles.locationText}>
+          {activity.location}</Text>
         </Pressable>
 
       <Text>{activity.time}</Text>

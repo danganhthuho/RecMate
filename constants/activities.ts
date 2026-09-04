@@ -1,0 +1,32 @@
+export const activities = [
+    {
+      id: 1,
+      sport: 'Billiards',
+      location: 'Student Union',
+      time: 'Today · 6:00 PM',
+      currentPlayers: 1,
+      maxPlayers: 2,
+      latitude: 37.3352,
+      longitude: -121.8811,
+    },
+    {
+      id: 2,
+      sport: 'Badminton',
+      location: 'SRAC',
+      time: 'Today · 7:30 PM',
+      currentPlayers: 2,
+      maxPlayers: 4,
+      latitude: 37.337,
+      longitude: -121.8805,
+    },
+    {
+      id: 3,
+      sport: 'Basketball',
+      location: 'SRAC Court',
+      time: 'Tomorrow · 4:00 PM',
+      currentPlayers: 5,
+      maxPlayers: 8,
+      latitude: 37.3371,
+      longitude: -121.8804,
+    },
+  ];

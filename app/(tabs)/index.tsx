@@ -2,33 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import ActivityCard from '@/components/ActivityCard';
-
-const initialActivities = [
-  {
-    id: 1,
-    sport: 'Billiards',
-    location: 'Student Union',
-    time: 'Today · 6:00 PM',
-    currentPlayers: 1,
-    maxPlayers: 2,
-  },
-  {
-    id: 2,
-    sport: 'Badminton',
-    location: 'SRAC',
-    time: 'Today · 7:30 PM',
-    currentPlayers: 2,
-    maxPlayers: 4,
-  },
-  {
-    id: 3,
-    sport: 'Basketball',
-    location: 'SRAC Court',
-    time: 'Tomorrow · 4:00 PM',
-    currentPlayers: 5,
-    maxPlayers: 8,
-  },
-];
+import { activities as initialActivities } from '@/constants/activities';
 
 export default function HomeScreen() {
   const [activities, setActivities] = useState(initialActivities);
